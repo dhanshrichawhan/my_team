@@ -28,6 +28,7 @@ img {
 	grid-area: position;
 	margin: 0;
 	align-self: flex-start;
+	font-family: PT Serif;
 	font-size: 12px;
 	writing-mode: vertical-lr;
 }
@@ -35,7 +36,8 @@ img {
 .member h3 {
 	margin: 0;
 	grid-area: name;
-	font-size: 18px;
+	font-family: PT Serif;
+	font-size: 20px;
 }
 
 /* Gallery Class */
@@ -115,6 +117,9 @@ h1 {
 	.content {
 		padding-top: 0px;
 		padding-left: 100px;
+	}
+	.content p{
+		font-size: 18px;
 	}
 	.gallery {
 		width: 100%;
