@@ -1,0 +1,156 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+img {
+	width: 160px;
+	max-width: 100%;
+}
+
+/* Member Class */
+.member {
+	display: grid;
+	max-width: 100%;
+	align-items: center;
+	grid-template-rows: 1fr auto;
+	grid-template-areas:
+		"image position"
+		"name name";
+}
+
+.member img {
+	grid-area: image;
+}
+
+.member p {
+	grid-area: position;
+	margin: 0;
+	align-self: flex-start;
+	font-size: 12px;
+	writing-mode: vertical-lr;
+}
+
+.member h3 {
+	margin: 0;
+	grid-area: name;
+	font-size: 18px;
+}
+
+/* Gallery Class */
+.gallery {
+	grid-area: gallery;
+	max-width: 90%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	column-gap: 10px;
+	justify-items: center;
+	align-items: center;
+}
+
+.two {
+	padding-top: 150px;
+}
+
+.four {
+	padding-top: 150px;
+}
+
+.six {
+	padding-top: 150px;
+}
+
+/* Main Container */
+.container {
+	margin-top: 100px;
+	margin-left: 30px;
+	display: grid;
+	grid-template-rows: auto auto 1fr auto;
+	grid-template-areas:
+		"heading"
+		"content"
+		"gallery"
+		"footer";
+}
+
+h1 {
+	grid-area: heading;
+	font-family: PT serif;
+}
+
+.content {
+	grid-area: content;
+	padding-top: 30px;
+	padding-right: 30px;
+	font-family: Poppins;
+}
+
+.footer {
+	grid-area: footer;
+	padding-top: 100px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	color: #616161;
+	text-align: center;
+}
+
+@media (min-width: 720px) {
+	.container {
+		margin-top: 100px;
+		margin-left: 50px;
+		display: grid;
+		grid-template-rows: auto auto 1fr auto;
+		grid-template-areas:
+			"heading content"
+			"gallery gallery"
+			"footer footer";
+		justify-items: center;
+		align-items: center;
+	}
+	.content {
+		padding-top: 0px;
+		padding-left: 100px;
+	}
+	.gallery {
+		width: 100%;
+		grid-area: gallery;
+		max-width: 90%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		column-gap: 10px;
+	}
+	.four {
+		padding-top: 0px;
+	}
+	.five {
+		padding-top: 150px;
+	}
+	.six {
+		padding-top: 0px;
+	}
+}
+
+@media (min-width: 1020px) {
+	.container {
+		margin: 100px 100px 100px 100px;
+	}
+	.content {
+		padding-top: 0px;
+		padding-right: 50px;
+		padding-left: 400px;
+	}
+	.gallery{
+		column-gap: 50px;
+	}
+	img{
+		max-width: 100%;
+		width: auto;
+		height: auto;
+	}
+}
